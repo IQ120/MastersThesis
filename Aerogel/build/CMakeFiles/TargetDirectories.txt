@@ -1,0 +1,4 @@
+/home/frantisek/G4/Master Thesis/Aerogel/build/CMakeFiles/rebuild_cache.dir
+/home/frantisek/G4/Master Thesis/Aerogel/build/CMakeFiles/edit_cache.dir
+/home/frantisek/G4/Master Thesis/Aerogel/build/CMakeFiles/Aerogel.dir
+/home/frantisek/G4/Master Thesis/Aerogel/build/CMakeFiles/aerogel.dir
