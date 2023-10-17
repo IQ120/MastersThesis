@@ -80,7 +80,7 @@ CMakeFiles/Aerogel.dir/all: CMakeFiles/aerogel.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Aerogel.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/frantisek/G4/Master Thesis/Aerogel/build/CMakeFiles" 3
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/frantisek/G4/Master Thesis/Aerogel/build/CMakeFiles" 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Aerogel.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/frantisek/G4/Master Thesis/Aerogel/build/CMakeFiles" 0
 .PHONY : CMakeFiles/Aerogel.dir/rule
@@ -102,12 +102,12 @@ CMakeFiles/Aerogel.dir/clean:
 CMakeFiles/aerogel.dir/all:
 	$(MAKE) -f CMakeFiles/aerogel.dir/build.make CMakeFiles/aerogel.dir/depend
 	$(MAKE) -f CMakeFiles/aerogel.dir/build.make CMakeFiles/aerogel.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/frantisek/G4/Master Thesis/Aerogel/build/CMakeFiles" --progress-num=1,2,3 "Built target aerogel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/frantisek/G4/Master Thesis/Aerogel/build/CMakeFiles" --progress-num=1,2,3,4,5,6 "Built target aerogel"
 .PHONY : CMakeFiles/aerogel.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/aerogel.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/frantisek/G4/Master Thesis/Aerogel/build/CMakeFiles" 3
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/frantisek/G4/Master Thesis/Aerogel/build/CMakeFiles" 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/aerogel.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/frantisek/G4/Master Thesis/Aerogel/build/CMakeFiles" 0
 .PHONY : CMakeFiles/aerogel.dir/rule

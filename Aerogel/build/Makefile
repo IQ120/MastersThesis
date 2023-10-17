@@ -163,6 +163,33 @@ aerogel.cc.s:
 	$(MAKE) -f CMakeFiles/aerogel.dir/build.make CMakeFiles/aerogel.dir/aerogel.cc.s
 .PHONY : aerogel.cc.s
 
+sources/ActionInitialization.o: sources/ActionInitialization.cc.o
+
+.PHONY : sources/ActionInitialization.o
+
+# target to build an object file
+sources/ActionInitialization.cc.o:
+	$(MAKE) -f CMakeFiles/aerogel.dir/build.make CMakeFiles/aerogel.dir/sources/ActionInitialization.cc.o
+.PHONY : sources/ActionInitialization.cc.o
+
+sources/ActionInitialization.i: sources/ActionInitialization.cc.i
+
+.PHONY : sources/ActionInitialization.i
+
+# target to preprocess a source file
+sources/ActionInitialization.cc.i:
+	$(MAKE) -f CMakeFiles/aerogel.dir/build.make CMakeFiles/aerogel.dir/sources/ActionInitialization.cc.i
+.PHONY : sources/ActionInitialization.cc.i
+
+sources/ActionInitialization.s: sources/ActionInitialization.cc.s
+
+.PHONY : sources/ActionInitialization.s
+
+# target to generate assembly for a file
+sources/ActionInitialization.cc.s:
+	$(MAKE) -f CMakeFiles/aerogel.dir/build.make CMakeFiles/aerogel.dir/sources/ActionInitialization.cc.s
+.PHONY : sources/ActionInitialization.cc.s
+
 sources/DetConstruction.o: sources/DetConstruction.cc.o
 
 .PHONY : sources/DetConstruction.o
@@ -190,6 +217,60 @@ sources/DetConstruction.cc.s:
 	$(MAKE) -f CMakeFiles/aerogel.dir/build.make CMakeFiles/aerogel.dir/sources/DetConstruction.cc.s
 .PHONY : sources/DetConstruction.cc.s
 
+sources/ParticleGun.o: sources/ParticleGun.cc.o
+
+.PHONY : sources/ParticleGun.o
+
+# target to build an object file
+sources/ParticleGun.cc.o:
+	$(MAKE) -f CMakeFiles/aerogel.dir/build.make CMakeFiles/aerogel.dir/sources/ParticleGun.cc.o
+.PHONY : sources/ParticleGun.cc.o
+
+sources/ParticleGun.i: sources/ParticleGun.cc.i
+
+.PHONY : sources/ParticleGun.i
+
+# target to preprocess a source file
+sources/ParticleGun.cc.i:
+	$(MAKE) -f CMakeFiles/aerogel.dir/build.make CMakeFiles/aerogel.dir/sources/ParticleGun.cc.i
+.PHONY : sources/ParticleGun.cc.i
+
+sources/ParticleGun.s: sources/ParticleGun.cc.s
+
+.PHONY : sources/ParticleGun.s
+
+# target to generate assembly for a file
+sources/ParticleGun.cc.s:
+	$(MAKE) -f CMakeFiles/aerogel.dir/build.make CMakeFiles/aerogel.dir/sources/ParticleGun.cc.s
+.PHONY : sources/ParticleGun.cc.s
+
+sources/PhysicsList.o: sources/PhysicsList.cc.o
+
+.PHONY : sources/PhysicsList.o
+
+# target to build an object file
+sources/PhysicsList.cc.o:
+	$(MAKE) -f CMakeFiles/aerogel.dir/build.make CMakeFiles/aerogel.dir/sources/PhysicsList.cc.o
+.PHONY : sources/PhysicsList.cc.o
+
+sources/PhysicsList.i: sources/PhysicsList.cc.i
+
+.PHONY : sources/PhysicsList.i
+
+# target to preprocess a source file
+sources/PhysicsList.cc.i:
+	$(MAKE) -f CMakeFiles/aerogel.dir/build.make CMakeFiles/aerogel.dir/sources/PhysicsList.cc.i
+.PHONY : sources/PhysicsList.cc.i
+
+sources/PhysicsList.s: sources/PhysicsList.cc.s
+
+.PHONY : sources/PhysicsList.s
+
+# target to generate assembly for a file
+sources/PhysicsList.cc.s:
+	$(MAKE) -f CMakeFiles/aerogel.dir/build.make CMakeFiles/aerogel.dir/sources/PhysicsList.cc.s
+.PHONY : sources/PhysicsList.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -203,9 +284,18 @@ help:
 	@echo "... aerogel.o"
 	@echo "... aerogel.i"
 	@echo "... aerogel.s"
+	@echo "... sources/ActionInitialization.o"
+	@echo "... sources/ActionInitialization.i"
+	@echo "... sources/ActionInitialization.s"
 	@echo "... sources/DetConstruction.o"
 	@echo "... sources/DetConstruction.i"
 	@echo "... sources/DetConstruction.s"
+	@echo "... sources/ParticleGun.o"
+	@echo "... sources/ParticleGun.i"
+	@echo "... sources/ParticleGun.s"
+	@echo "... sources/PhysicsList.o"
+	@echo "... sources/PhysicsList.i"
+	@echo "... sources/PhysicsList.s"
 .PHONY : help
 
 

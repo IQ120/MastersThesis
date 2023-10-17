@@ -70,9 +70,22 @@ CMakeFiles/aerogel.dir/aerogel.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aerogel.dir/aerogel.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/frantisek/G4/Master Thesis/Aerogel/aerogel.cc" -o CMakeFiles/aerogel.dir/aerogel.cc.s
 
+CMakeFiles/aerogel.dir/sources/ActionInitialization.cc.o: CMakeFiles/aerogel.dir/flags.make
+CMakeFiles/aerogel.dir/sources/ActionInitialization.cc.o: ../sources/ActionInitialization.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/frantisek/G4/Master Thesis/Aerogel/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/aerogel.dir/sources/ActionInitialization.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/aerogel.dir/sources/ActionInitialization.cc.o -c "/home/frantisek/G4/Master Thesis/Aerogel/sources/ActionInitialization.cc"
+
+CMakeFiles/aerogel.dir/sources/ActionInitialization.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aerogel.dir/sources/ActionInitialization.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/frantisek/G4/Master Thesis/Aerogel/sources/ActionInitialization.cc" > CMakeFiles/aerogel.dir/sources/ActionInitialization.cc.i
+
+CMakeFiles/aerogel.dir/sources/ActionInitialization.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aerogel.dir/sources/ActionInitialization.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/frantisek/G4/Master Thesis/Aerogel/sources/ActionInitialization.cc" -o CMakeFiles/aerogel.dir/sources/ActionInitialization.cc.s
+
 CMakeFiles/aerogel.dir/sources/DetConstruction.cc.o: CMakeFiles/aerogel.dir/flags.make
 CMakeFiles/aerogel.dir/sources/DetConstruction.cc.o: ../sources/DetConstruction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/frantisek/G4/Master Thesis/Aerogel/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/aerogel.dir/sources/DetConstruction.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/frantisek/G4/Master Thesis/Aerogel/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/aerogel.dir/sources/DetConstruction.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/aerogel.dir/sources/DetConstruction.cc.o -c "/home/frantisek/G4/Master Thesis/Aerogel/sources/DetConstruction.cc"
 
 CMakeFiles/aerogel.dir/sources/DetConstruction.cc.i: cmake_force
@@ -83,16 +96,48 @@ CMakeFiles/aerogel.dir/sources/DetConstruction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aerogel.dir/sources/DetConstruction.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/frantisek/G4/Master Thesis/Aerogel/sources/DetConstruction.cc" -o CMakeFiles/aerogel.dir/sources/DetConstruction.cc.s
 
+CMakeFiles/aerogel.dir/sources/ParticleGun.cc.o: CMakeFiles/aerogel.dir/flags.make
+CMakeFiles/aerogel.dir/sources/ParticleGun.cc.o: ../sources/ParticleGun.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/frantisek/G4/Master Thesis/Aerogel/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/aerogel.dir/sources/ParticleGun.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/aerogel.dir/sources/ParticleGun.cc.o -c "/home/frantisek/G4/Master Thesis/Aerogel/sources/ParticleGun.cc"
+
+CMakeFiles/aerogel.dir/sources/ParticleGun.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aerogel.dir/sources/ParticleGun.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/frantisek/G4/Master Thesis/Aerogel/sources/ParticleGun.cc" > CMakeFiles/aerogel.dir/sources/ParticleGun.cc.i
+
+CMakeFiles/aerogel.dir/sources/ParticleGun.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aerogel.dir/sources/ParticleGun.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/frantisek/G4/Master Thesis/Aerogel/sources/ParticleGun.cc" -o CMakeFiles/aerogel.dir/sources/ParticleGun.cc.s
+
+CMakeFiles/aerogel.dir/sources/PhysicsList.cc.o: CMakeFiles/aerogel.dir/flags.make
+CMakeFiles/aerogel.dir/sources/PhysicsList.cc.o: ../sources/PhysicsList.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/frantisek/G4/Master Thesis/Aerogel/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/aerogel.dir/sources/PhysicsList.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/aerogel.dir/sources/PhysicsList.cc.o -c "/home/frantisek/G4/Master Thesis/Aerogel/sources/PhysicsList.cc"
+
+CMakeFiles/aerogel.dir/sources/PhysicsList.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aerogel.dir/sources/PhysicsList.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/frantisek/G4/Master Thesis/Aerogel/sources/PhysicsList.cc" > CMakeFiles/aerogel.dir/sources/PhysicsList.cc.i
+
+CMakeFiles/aerogel.dir/sources/PhysicsList.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aerogel.dir/sources/PhysicsList.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/frantisek/G4/Master Thesis/Aerogel/sources/PhysicsList.cc" -o CMakeFiles/aerogel.dir/sources/PhysicsList.cc.s
+
 # Object files for target aerogel
 aerogel_OBJECTS = \
 "CMakeFiles/aerogel.dir/aerogel.cc.o" \
-"CMakeFiles/aerogel.dir/sources/DetConstruction.cc.o"
+"CMakeFiles/aerogel.dir/sources/ActionInitialization.cc.o" \
+"CMakeFiles/aerogel.dir/sources/DetConstruction.cc.o" \
+"CMakeFiles/aerogel.dir/sources/ParticleGun.cc.o" \
+"CMakeFiles/aerogel.dir/sources/PhysicsList.cc.o"
 
 # External object files for target aerogel
 aerogel_EXTERNAL_OBJECTS =
 
 aerogel: CMakeFiles/aerogel.dir/aerogel.cc.o
+aerogel: CMakeFiles/aerogel.dir/sources/ActionInitialization.cc.o
 aerogel: CMakeFiles/aerogel.dir/sources/DetConstruction.cc.o
+aerogel: CMakeFiles/aerogel.dir/sources/ParticleGun.cc.o
+aerogel: CMakeFiles/aerogel.dir/sources/PhysicsList.cc.o
 aerogel: CMakeFiles/aerogel.dir/build.make
 aerogel: /home/frantisek/Software/geant4/geant4.10.07.p02-install/lib/libG4Tree.so
 aerogel: /home/frantisek/Software/geant4/geant4.10.07.p02-install/lib/libG4FR.so
@@ -141,7 +186,7 @@ aerogel: /home/frantisek/Software/geant4/geant4.10.07.p02-install/lib/libG4globa
 aerogel: /home/frantisek/Software/geant4/geant4.10.07.p02-install/lib/libG4clhep.so
 aerogel: /home/frantisek/Software/geant4/geant4.10.07.p02-install/lib/libG4ptl.so.0.0.2
 aerogel: CMakeFiles/aerogel.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/frantisek/G4/Master Thesis/Aerogel/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable aerogel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/frantisek/G4/Master Thesis/Aerogel/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable aerogel"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/aerogel.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

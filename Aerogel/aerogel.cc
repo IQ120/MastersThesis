@@ -7,12 +7,16 @@
 #include "G4UIExecutive.hh"
 
 #include "DetConstruction.hh"
+#include "PhysicsList.hh"
+#include "ActionInitialization.hh"
 
 int main(int argc, char** argv)
 {
 	G4RunManager *runManager = new G4RunManager();
 	
 	runManager->SetUserInitialization(new DetConstruction());
+	runManager->SetUserInitialization(new PhysicsList());
+	runManager->SetUserInitialization(new ActionInitialization());
 	
 	runManager->Initialize();
 	
@@ -22,6 +26,12 @@ int main(int argc, char** argv)
 	visManager->Initialize();
 	
 	G4UImanager *UImanager = G4UImanager::GetUIpointer();
+	
+	UImanager->ApplyCommand("/vis/open OGL");
+	UImanager->ApplyCommand("/vis/viewer/set/viewpointVector 1 1 1");
+	UImanager->ApplyCommand("/vis/drawVolume");
+	UImanager->ApplyCommand("/vis/viewer/set/autoRefresh true");
+	UImanager->ApplyCommand("/vis/scene/add/trajectories smooth");
 	
 	ui->SessionStart();
 		

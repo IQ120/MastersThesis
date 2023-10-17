@@ -1,6 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/aerogel.dir/aerogel.cc.o"
+  "CMakeFiles/aerogel.dir/sources/ActionInitialization.cc.o"
   "CMakeFiles/aerogel.dir/sources/DetConstruction.cc.o"
+  "CMakeFiles/aerogel.dir/sources/ParticleGun.cc.o"
+  "CMakeFiles/aerogel.dir/sources/PhysicsList.cc.o"
   "aerogel"
   "aerogel.pdb"
 )
