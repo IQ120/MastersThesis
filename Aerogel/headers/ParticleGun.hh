@@ -2,10 +2,15 @@
 #define PARTICLES_HH
 
 #include "G4VUserPrimaryGeneratorAction.hh"
+#include "globals.hh"
 
 #include "G4ParticleGun.hh"
 #include "G4SystemOfUnits.hh"
 #include "G4ParticleTable.hh"
+
+#include "G4Box.hh"
+#include "G4LogicalVolume.hh"
+#include "G4LogicalVolumeStore.hh"
 
 class ParticleGun : public G4VUserPrimaryGeneratorAction
 {

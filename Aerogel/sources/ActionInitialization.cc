@@ -1,13 +1,13 @@
 #include "ActionInitialization.hh"
 
-ActionInitialization::ActionInitialization()
+ActionInitialization::ActionInitialization()		//operátor vytvoření ake
 {}
 
-ActionInitialization::~ActionInitialization()
+ActionInitialization::~ActionInitialization()		//destruktor actioninitialization
 {}
 
 void ActionInitialization::Build() const
 {
-	ParticleGun *gun = new ParticleGun();
+	ParticleGun *gun = new ParticleGun();		//definice fce ActionInitialization - spustí particle gun
 	SetUserAction(gun);
 }
