@@ -36,6 +36,9 @@ G4VPhysicalVolume *DetConstruction::Construct()
 	//###---ALUMINIUM_REFLECTOR_MAT---###
 	G4Material *RefMat = nist->FindOrBuildMaterial("G4_Al");		//vyhledání materiálu reflektoru v databázi
 	
+	//###---LEAD_GLASS_CAL_MAT---###
+	G4Material *PbGlass = nist->FindOrBuildMaterial("G4_GLASS_LEAD");	//vyhledání lead glass v G4 databázi
+		
 	//###########################---Material_Properties_Tables---###############################
 		
 	G4double energy[2] = {1.239841939*eV/0.2, 1.239841939*eV/0.9};	//vytvoření pole energií pro material properties table
@@ -63,15 +66,15 @@ G4VPhysicalVolume *DetConstruction::Construct()
 	//#########################---Geometrie---################################
 	
 	//#######---WORLD---########
-	G4Box *solidWorld = new G4Box("World", 1.*m, 1.*m, 1.*m);
+	G4Box *solidWorld = new G4Box("World", 50.*cm, 50.*cm, 3.*m);
 	G4LogicalVolume *logicWorld = new G4LogicalVolume(solidWorld, worldMat, "World");					//vytvoření objemu, logického objemu a vložení světa
 	G4VPhysicalVolume *physWorld = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicWorld, "World", 0, false, 0, true);	
 	
 	//#######---AEROGEL---#######
 	
 	G4Box *AerogelBox = new G4Box("AerogelBox", 5.*cm, 5.*cm, 2.*cm);
-	G4LogicalVolume *logicGel = new G4LogicalVolume(AerogelBox, Aerogel, "logicGel");					//vložení aerogelu do světa (vytvoření objemu a logickéh objemu) 
-	G4VPhysicalVolume* physGel[4];
+	G4LogicalVolume *logicGel = new G4LogicalVolume(AerogelBox, Aerogel, "logicGel");					//vytvoření objemu a logického objemu aerogelu
+	G4VPhysicalVolume* physGel[4];											//definování pole aerogelů o 4 položkách
 	
 	//#######---REFLECTOR---#######
 	
@@ -89,6 +92,12 @@ G4VPhysicalVolume *DetConstruction::Construct()
 		G4VPhysicalVolume *physRef1 = new G4PVPlacement(0, G4ThreeVector(25.*mm, 0.*mm, 45.*mm + n*20.*cm), logicRef1, "physRef1", logicWorld, false, n+200, true);	
 		G4VPhysicalVolume *physRef2 = new G4PVPlacement(0, G4ThreeVector(-25.*mm, 0.*mm, 45.*mm + n*20.*cm), logicRef2, "physRef2", logicWorld, false, n+300, true);
 	}
+	
+	//#######---LEAD_GLASS_CALORIMETER---#######
+	
+	G4Box* PbGlassCal = new G4Box("PbGlassCal", 25.*cm, 25.*cm, 50.*cm);
+	G4LogicalVolume *logicCal = new G4LogicalVolume(PbGlassCal, PbGlass, "logicCal");
+	G4VPhysicalVolume *physCal = new G4PVPlacement(0, G4ThreeVector(0., 0., 150.*cm), logicCal, "physCal", logicWorld, false, 0, true);  
 	
 	return physWorld;
 }
