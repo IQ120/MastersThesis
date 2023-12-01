@@ -11,6 +11,7 @@
 #include "G4Box.hh"
 #include "G4Para.hh"
 #include "G4SystemOfUnits.hh"
+#include "G4SubtractionSolid.hh"
 
 #include "G4LogicalVolumeStore.hh"
 

@@ -3,6 +3,12 @@
 ParticleGun::ParticleGun()
 {
 	fParticleGun = new G4ParticleGun(1);		//particle gun creation
+	
+	G4ParticleTable *particleTable = G4ParticleTable::GetParticleTable();	//reference na G4 fatabázi s částicemi
+	G4String particleName = "e-";							
+	G4ParticleDefinition *particle = particleTable->FindParticle(particleName);	//generovaná částice PG - elektron
+	fParticleGun->SetParticleEnergy(220.*MeV);					//nastavení energie původní částice
+	fParticleGun->SetParticleDefinition(particle);				//nastavení, jakou částici PG vystřeluje
 }
 
 ParticleGun::~ParticleGun()
@@ -12,9 +18,7 @@ ParticleGun::~ParticleGun()
 
 void ParticleGun::GeneratePrimaries(G4Event *anEvent)		//PG function
 {
-	G4ParticleTable *particleTable = G4ParticleTable::GetParticleTable();	//reference na G4 fatabázi s částicemi
-	G4String particleName = "e-";							
-	G4ParticleDefinition *particle = particleTable->FindParticle(particleName);	//generovaná částice PG - elektron
+	
 	
 	G4double worldZHalfLength = 0.;
 	auto worldLV = G4LogicalVolumeStore::GetInstance()->GetVolume("World");	//z LogicalVolumeStore vytahujeme parametry světa vytvořeného v DetConstruction.cc
@@ -26,8 +30,7 @@ void ParticleGun::GeneratePrimaries(G4Event *anEvent)		//PG function
 	
 	fParticleGun->SetParticlePosition(pos);					//nastavení pozice PG
 	fParticleGun->SetParticleMomentumDirection(mom);				//nastavení směru částic
-	fParticleGun->SetParticleEnergy(220.*MeV);					//nastavení energie původní částice
-	fParticleGun->SetParticleDefinition(particle);				//nastavení, jakou částici PG vystřeluje
+	
 	
 	fParticleGun->GeneratePrimaryVertex(anEvent);	
 }

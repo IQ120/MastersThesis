@@ -38,6 +38,9 @@ G4VPhysicalVolume *DetConstruction::Construct()
 	
 	//###---LEAD_GLASS_CAL_MAT---###
 	G4Material *PbGlass = nist->FindOrBuildMaterial("G4_GLASS_LEAD");	//vyhledání lead glass v G4 databázi
+	
+	//###---PVC_BOX_MAT---###
+	G4Material *PVCmat = nist->FindOrBuildMaterial("G4_POLYVINYL_CHLORIDE");	//vyhledání PVC v G4 databázi materiálů
 		
 	//###########################---Material_Properties_Tables---###############################
 		
@@ -87,10 +90,21 @@ G4VPhysicalVolume *DetConstruction::Construct()
 	G4VPhysicalVolume* physRef1[4];		//vytvoření polí reflektorů
 	G4VPhysicalVolume* physRef2[4];
 	
-	for(G4int n = 0; n < 4; n++){		//for cyklus generující opakující se prvky - aerogel a reflektory - každá iterace posune prvky o 20 cm
+	//#######---PVC BOX---#######
+	
+	G4Box* box1 = new G4Box("box1", 7.5*cm, 7.5*cm, 7.5*cm);					//rozměry 1. boxu
+	G4Box* box2 = new G4Box("box2", 5.5*cm, 5.5*cm, 5.5*cm);					//rozměry 2. boxu
+	G4SubtractionSolid* PVCbox = new G4SubtractionSolid("PVCbox", box1, box2);			//definování rozdílového objemu
+	G4LogicalVolume *logicPVCbox = new G4LogicalVolume(PVCbox, PVCmat, "logicPVCbox");		//přiřazení logického objemu
+	G4VPhysicalVolume* physPVCbox[4];								//vytvoření polí boxů
+	
+	//#######---FOR CYCLE FOR REPEATING VOLUMES---#######
+	
+	for(G4int n = 0; n < 4; n++){		//for cyklus generující opakující se prvky - aerogel, reflektory a okolní PVC boxy - každá iterace posune prvky o 20 cm
 		physGel[n] = new G4PVPlacement(0, G4ThreeVector(0., 0., n*20.*cm), logicGel, "physGel", logicWorld, false, n+100, true);
-		G4VPhysicalVolume *physRef1 = new G4PVPlacement(0, G4ThreeVector(25.*mm, 0.*mm, 45.*mm + n*20.*cm), logicRef1, "physRef1", logicWorld, false, n+200, true);	
-		G4VPhysicalVolume *physRef2 = new G4PVPlacement(0, G4ThreeVector(-25.*mm, 0.*mm, 45.*mm + n*20.*cm), logicRef2, "physRef2", logicWorld, false, n+300, true);
+		physRef1[n] = new G4PVPlacement(0, G4ThreeVector(25.*mm, 0.*mm, 45.*mm + n*20.*cm), logicRef1, "physRef1", logicWorld, false, n+200, true);	
+		physRef2[n] = new G4PVPlacement(0, G4ThreeVector(-25.*mm, 0.*mm, 45.*mm + n*20.*cm), logicRef2, "physRef2", logicWorld, false, n+300, true);
+		physPVCbox[n] = new G4PVPlacement(0, G4ThreeVector(0., 0., 3.5*cm + n*20.*cm), logicPVCbox, "physPVCbox", logicWorld, false, n+400, true);
 	}
 	
 	//#######---LEAD_GLASS_CALORIMETER---#######
